@@ -84,6 +84,15 @@
                         "EsoIsVisible": "_:boolean*",
                         "IsGenericModel": "_:boolean*"
                     },
+                    "LocationId": "string*",
+                    "Location": {
+                        "Name": "_:string*",
+                        "LocationTypeId": "_:string*",
+                        "LocationType": {
+                            "Name": "_:string*"
+                        }
+                    },
+                    "LocationDetails": "string*",
                     "HasOpenTickets": "boolean*",
                     "OpenTickets": "string*",
                     "CustomFieldValues": "string*",
