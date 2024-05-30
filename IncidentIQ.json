@@ -1,0 +1,729 @@
+{
+    "schema": {
+        "options": {},
+        "crud_objects": {
+            "Assets": {
+                "operations": {
+                    "AssetsList": {
+                        "method": "get",
+                        "verb": "post",
+                        "call": {
+                            "path": "/services/assets"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "AssetId",
+                "resources": {
+                    "AssetId": "string*",
+                    "SiteId": "string*",
+                    "Site": {
+                        "SiteId": "_:string*",
+                        "ProductId": "_:string",
+                        "CreatedDate": "_:string",
+                        "Name": "_:string",
+                        "OffsetInMinutesFromUtc": "_:string",
+                        "WorkMinutesPerDay": "_:string",
+                        "DbClusterIndex": "_:string",
+                        "StatusTypeId": "_:string",
+                        "WorkHoursStartUtc": "_:string",
+                        "WorkHoursEndUtc": "_:string",
+                        "SystemUserId": "_:string",
+                        "AnonymousUserId": "_:string",
+                        "IsSandbox": "_:boolean"
+                    },
+                    "ProductId": "string*",
+                    "CreatedDate": "string*",
+                    "ModifiedDate": "string*",
+                    "AssetTypeId": "string*",
+                    "AssetTypeName": "string*",
+                    "AssetInventoryTypeId": "string*",
+                    "IsDeleted": "boolean*",
+                    "StatusTypeId": "string*",
+                    "Status": {
+                        "AssetStatusTypeId": "_:string*",
+                        "Scope": "_:string*",
+                        "Name": "_:string*",
+                        "IsRetired": "_:boolean*"
+                    },
+                    "AssetTag": "string*",
+                    "Name": "string*",
+                    "CanOwnerManage": "boolean*",
+                    "CanSubmitTicket": "boolean*",
+                    "IsFavorite": "boolean*",
+                    "ModelId": "string*",
+                    "Model": {
+                        "ModelId": "_:string*",
+                        "Scope": "_:string*",
+                        "Name": "_:string*",
+                        "ModelName": "_:string*",
+                        "AssetTypeId": "_:string*",
+                        "ManufacturerId": "_:string*",
+                        "Manufacturer": {
+                            "ManufacturerId": "_:string*",
+                            "Scope": "_:string*",
+                            "Name": "_:string*",
+                            "EsoIsVisible": "_:boolean*"
+                        },
+                        "CategoryId": "_:string*",
+                        "Category": {
+                            "Scope": "_:string*",
+                            "CategoryId": "_:string*",
+                            "Level": "_:string",
+                            "SortOrder": "_:string",
+                            "CategoryTypeId": "_:string*",
+                            "Name": "_:string*",
+                            "Icon": "_:string"
+                        },
+                        "CreatedDate": "_:string*",
+                        "ModifiedDate": "_:string*",
+                        "EsoIsVisible": "_:boolean*",
+                        "IsGenericModel": "_:boolean*"
+                    },
+                    "HasOpenTickets": "boolean*",
+                    "OpenTickets": "string*",
+                    "CustomFieldValues": "string*",
+                    "AssetAuditPolicyStatusSortOrder": "string*",
+                    "LastVerificationSuccessful": "boolean*",
+                    "TotalQuantity": "string*",
+                    "AvailableQuantity": "string*"
+                }
+                
+            },
+            "Asset_Types": {
+                "operations": {
+                    "Asset_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/assets/types"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    },
+                    "Asset_TypesUpdate": {
+                        "method": "post",
+                        "call": {
+                            "mode": "normal",
+                            "path": "/api/v1.0/assets/types/{AssetTypeId}"
+                        },
+                        "semantics": "update",
+                        "resource_allowance_default": "optional",
+                        "resource_prohibited": [
+                        ],
+                        "resource_mandatory": [
+                            "AssetTypeId"
+                        ]
+                    }
+                },
+                "parameters": {},
+                "key": "AssetTypeId",
+                "resources": {
+                    "AssetTypeId": "string*",
+                    "Scope": "string*",
+                    "Name": "string*",
+                    "Icon": "string*",
+                    "DefaultColumns": ["string*"],
+                    "SortOrder": "number*",
+                    "Assets": "number*",
+                    "EsoIsVisible": "boolean*",
+                    "AssetInventoryTypeId": "string*"
+                }
+                
+            },
+            "CustomFields": {
+                "operations": {
+                    "CustomFieldsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/custom-fields"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "CustomFieldId",
+                "resources": {
+                    "SiteId": "ffa98c13-f4cb-4073-aa27-c260d17ea00f",
+                    "CustomFieldId": "string*",
+                    "Scope": "string*",
+                    "CustomFieldTypeId": "string*",
+                    "EntityTypeId": "string*",
+                    "IsRequired": "boolean*",
+                    "IsReadOnly": "boolean*",
+                    "IsHidden": "boolean*",
+                    "IsSystemField": "boolean*",
+                    "DisplayOrder": "string*",
+                    "TypeDisplayOrder": "string*",
+                    "SetDisplayOrder": "string*",
+                    "EditorTypeId": "string*",
+                    "IsDeleted": "boolean*",
+                    "OriginSourceId": "string*",
+                    "OriginId": "string*",
+                    "FilterSetId": "string*"
+                }
+                
+            },
+            "CustomFields_Types": {
+                "operations": {
+                    "CustomeFields_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/custom-fields/types"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "AssetTypeId",
+                "resources": {
+                    "SiteId": "string*",
+                    "ProductId": "string*",
+                    "CustomFieldTypeId": "string*",
+                    "Scope": "string*",
+                    "Name": "string*",
+                    "Description": "string*",
+                    "OwnerAppId": "string*",
+                    "EditorType": "number*",
+                    "Options": "string*",
+                    "HasSensitiveInformation": "boolean*",
+                    "Configuration": "string*",
+                    "IsRequired": "boolean*",
+                    "IsReadOnly": "boolean*",
+                    "IsPublic": "boolean*",
+                    "IsHidden": "boolean*",
+                    "IsSystemField": "boolean*",
+                    "HideNameFromDisplay": "boolean*",
+                    "MaxNumberOfInstances": "number*",
+                    "EnabledByDefault": "boolean*",
+                    "DisplayOrder": "number*",
+                    "ComplexEditorNamespace": "boolean*",
+                    "ComplexEditorColumns": "string*",
+                    "IsDeleted": "boolean*"
+                }
+                
+            },
+            "Filters": {
+                "operations": {
+                    "FiltersList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/filters"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "FilterId",
+                "resources": {
+                    "FilterId": "string*",
+                    "IsDeleted": "boolean*",
+                    "Key": "string*",
+                    "Name": "string*",
+                    "Recommended": "boolean*",
+                    "PluralizeValues": "boolean*",
+                    "CategoryId": "string*",
+                    "FilterTypeId": "string*",
+                    "Scope": "string*",
+                    "ProductId": "string*",
+                    "SearchPriority": "string*",
+                    "SearchMaxResults": "string*",
+                    "CacheAvailableSelectionsOnEdit": "boolean*",
+                    "CreatedDate": "string*",
+                    "ModifiedDate": "string*",
+                    "OriginSourceId": "string*"
+                }
+                
+            },
+            "Sites": {
+                "operations": {
+                    "SitesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/sites/{tenant_id}"
+                        },
+                        "processing_options": {
+                            "output_field": "Item"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "StatusTypeId":  "string*",
+                    "SystemUserId":  "string*",
+                    "DeploymentDate":  "string*",
+                    "NcesId":  "string*",
+                    "AnalyticsCode":  "string*",
+                    "Settings":  {
+                                     "Keys":  {
+                                                  "Messaging.Endpoint":  "_:string*",
+                                                  "Events.PublishKey":  "_:string*",
+                                                  "Events.SubscribeKey":  "_:string*"
+                                              },
+                                     "Categories":  {
+                                                        "AdHocParts":  "_:string*"
+                                                    },
+                                     "Name":  "_:string*",
+                                     "CategoryTypes":  {
+                                                           "Forms":  "_:string*",
+                                                           "Assets":  "_:string*",
+                                                           "Models":  "_:string*",
+                                                           "RoleCategories":  "_:string*",
+                                                           "Apps":  "_:string*",
+                                                           "ContentTypes":  "_:string*",
+                                                           "Issues":  "_:string*",
+                                                           "Filters":  "_:string*",
+                                                           "ExceptionTypes":  "_:string*",
+                                                           "Resolutions":  "_:string*",
+                                                           "Kb":  "_:string*",
+                                                           "Inventory":  "_:string*",
+                                                           "RuleActions":  "_:string*",
+                                                           "Settings":  "_:string*",
+                                                           "ResourceGroups":  "_:string*",
+                                                           "Widgets":  "_:string*",
+                                                           "Files":  "_:string*",
+                                                           "TicketWizards":  "_:string*"
+                                                       },
+                                     "ManufacturerOther":  "_:string*",
+                                     "ResolutionActionConfirmedIssue":  "_:string*",
+                                     "EntityTypes":  {
+                                                         "LocationRooms":  "_:string*",
+                                                         "AssetAuditPolicyTypes":  "_:string*",
+                                                         "FeeScheduleEntities":  "_:string*",
+                                                         "PermissionPoliciesConditionFilter":  "_:string*",
+                                                         "InventoryItems":  "_:string*",
+                                                         "AssetVerifications":  "_:string*",
+                                                         "InventoryActions":  "_:string*",
+                                                         "Tags":  "_:string*",
+                                                         "AssetInventoryTypes":  "_:string*",
+                                                         "ResolutionActions":  "_:string*",
+                                                         "FormSubmissions":  "_:string*",
+                                                         "LaborTypes":  "_:string*",
+                                                         "FileRules":  "_:string*",
+                                                         "AssetAuditPolicySchedules":  "_:string*",
+                                                         "Departments":  "_:string*",
+                                                         "Slas":  "_:string*",
+                                                         "MentorshipAssessments":  "_:string*",
+                                                         "TicketTypes":  "_:string*",
+                                                         "Users":  "_:string*",
+                                                         "RuleTriggerTypes":  "_:string*",
+                                                         "AssetVerificationTypes":  "_:string*",
+                                                         "GuestTickets":  "_:string*",
+                                                         "CalendarEvents":  "_:string*",
+                                                         "Inventories":  "_:string*",
+                                                         "Roles":  "_:string*",
+                                                         "Teams":  "_:string*",
+                                                         "EntityMappingTypes":  "_:string*",
+                                                         "FormRules":  "_:string*",
+                                                         "EventRules":  "_:string*",
+                                                         "Tickets":  "_:string*",
+                                                         "Sites":  "_:string*",
+                                                         "Surveys":  "_:string*",
+                                                         "Dashboards":  "_:string*",
+                                                         "AppFeatures":  "_:string*",
+                                                         "TicketStatusTypes":  "_:string*",
+                                                         "Models":  "_:string*",
+                                                         "InventoryCategories":  "_:string*",
+                                                         "Locations":  "_:string*",
+                                                         "Metrics":  "_:string*",
+                                                         "AssetTypes":  "_:string*",
+                                                         "Assets":  "_:string*",
+                                                         "TicketTemplates":  "_:string*",
+                                                         "Parts":  "_:string*",
+                                                         "OrganizationRules":  "_:string*",
+                                                         "AssetAuditPolicyStatusTypes":  "_:string*",
+                                                         "ModelIssues":  "_:string*",
+                                                         "RateTypes":  "_:string*",
+                                                         "PermissionPoliciesAppliesTo":  "_:string*",
+                                                         "AssetFundingTypes":  "_:string*",
+                                                         "Calendars":  "_:string*",
+                                                         "AssetAuditPolicyEventTypes":  "_:string*",
+                                                         "NavItems":  "_:string*",
+                                                         "FlowProcedures":  "_:string*",
+                                                         "Reports":  "_:string*",
+                                                         "Sandboxes":  "_:string*",
+                                                         "RecommendedIssueActions":  "_:string*",
+                                                         "AssetStatusTypes":  "_:string*",
+                                                         "CustomFields":  "_:string*",
+                                                         "EmploymentStatuses":  "_:string*",
+                                                         "AppWidgets":  "_:string*",
+                                                         "CloseReasonTypes":  "_:string*",
+                                                         "Sources":  "_:string*",
+                                                         "FundingSources":  "_:string*",
+                                                         "PermissionPolicies":  "_:string*",
+                                                         "FeeSchedules":  "_:string*",
+                                                         "IssueResolutionActions":  "_:string*",
+                                                         "PermissionRights":  "_:string*",
+                                                         "GridColumns":  "_:string*",
+                                                         "EventEntities":  "_:string*",
+                                                         "Screens":  "_:string*",
+                                                         "SettingTypes":  "_:string*",
+                                                         "Imports":  "_:string*",
+                                                         "Organizations":  "_:string*",
+                                                         "AssetAuditPolicies":  "_:string*",
+                                                         "Notifications":  "_:string*",
+                                                         "PriorityLevels":  "_:string*",
+                                                         "Issues":  "_:string*",
+                                                         "AssetRules":  "_:string*",
+                                                         "KbArticles":  "_:string*",
+                                                         "Forms":  "_:string*",
+                                                         "MapPins":  "_:string*",
+                                                         "OrganizationStatusTypes":  "_:string*",
+                                                         "MetricTypes":  "_:string*",
+                                                         "MentorshipPrograms":  "_:string*",
+                                                         "FeeScheduleTypes":  "_:string*",
+                                                         "Subtasks":  "_:string*",
+                                                         "Categories":  "_:string*",
+                                                         "Manufacturers":  "_:string*",
+                                                         "GridBulkOptions":  "_:string*",
+                                                         "UserRules":  "_:string*",
+                                                         "TicketRules":  "_:string*",
+                                                         "EventTypes":  "_:string*",
+                                                         "MentorshipStages":  "_:string*",
+                                                         "Events":  "_:string*",
+                                                         "IssueTypes":  "_:string*",
+                                                         "TextTransformations":  "_:string*",
+                                                         "OrganizationTypes":  "_:string*",
+                                                         "UserStatuses":  "_:string*",
+                                                         "Views":  "_:string*",
+                                                         "EntityMappings":  "_:string*",
+                                                         "Workflows":  "_:string*",
+                                                         "Files":  "_:string*",
+                                                         "Maps":  "_:string*",
+                                                         "SisCourses":  "_:string*",
+                                                         "ProductFeatures":  "_:string*",
+                                                         "Suppliers":  "_:string*",
+                                                         "SisClasses":  "_:string*",
+                                                         "InventoryRules":  "_:string*",
+                                                         "LocationRoomTypes":  "_:string*",
+                                                         "EventStatusTypes":  "_:string*",
+                                                         "PurchaseOrders":  "_:string*",
+                                                         "CustomFieldTypes":  "_:string*",
+                                                         "WorkflowSteps":  "_:string*",
+                                                         "Jobs":  "_:string*",
+                                                         "LaborRates":  "_:string*",
+                                                         "LocationTypes":  "_:string*"
+                                                     },
+                                     "FileTypes":  {
+                                                       "PurchaseOrder":  "_:datetime*",
+                                                       "PurchaseOrderInvoice":  "_:datetime*"
+                                                   },
+                                     "SiteId":  "_:string*",
+                                     "ActivityTypes":  {
+                                                           "SubtaskUpdated":  "_:datetime*",
+                                                           "AssetAuditPolicyEvent":  "_:datetime*",
+                                                           "TicketCanceled":  "_:datetime*",
+                                                           "Comment":  "_:datetime*",
+                                                           "SubtaskConvertedToTicket":  "_:datetime*",
+                                                           "AssetAudited":  "_:datetime*",
+                                                           "Created":  "_:datetime*",
+                                                           "OutsideRepairRequested":  "_:datetime*",
+                                                           "SubtaskRemoved":  "_:datetime*",
+                                                           "DuplicateTicket":  "_:datetime*",
+                                                           "StatusChange":  "_:datetime*",
+                                                           "FollowerAdded":  "_:datetime*",
+                                                           "TagRemoved":  "_:datetime*",
+                                                           "TagAdded":  "_:datetime*",
+                                                           "Part":  "_:datetime*",
+                                                           "SubtaskUnassigned":  "_:datetime*",
+                                                           "SubtaskReverted":  "_:datetime*",
+                                                           "SubtaskCompleted":  "_:datetime*",
+                                                           "SpareReturned":  "_:datetime*",
+                                                           "OutsideRepairDeclined":  "_:datetime*",
+                                                           "Deferred":  "_:datetime*",
+                                                           "SubtaskAssigned":  "_:datetime*",
+                                                           "OutsideRepairCanceled":  "_:datetime*",
+                                                           "SubtaskCreated":  "_:datetime*",
+                                                           "AwaitingApproval":  "_:datetime*",
+                                                           "Email":  "_:datetime*",
+                                                           "Viewed":  "_:datetime*",
+                                                           "Deleted":  "_:datetime*",
+                                                           "ResolutionAction":  "_:datetime*",
+                                                           "FollowerRemoved":  "_:datetime*",
+                                                           "OutsideRepairStatusChanged":  "_:datetime*",
+                                                           "OutsideRepairReturned":  "_:datetime*",
+                                                           "AttachmentAdded":  "_:datetime*",
+                                                           "TicketCreated":  "_:datetime*",
+                                                           "OutsideRepairApproved":  "_:datetime*",
+                                                           "SpareIssued":  "_:datetime*",
+                                                           "WebHookCalled":  "_:datetime*",
+                                                           "AppActivity":  "_:datetime*",
+                                                           "Approved":  "_:datetime*",
+                                                           "TicketSlaMetricUpdated":  "_:datetime*",
+                                                           "Other":  "_:datetime*",
+                                                           "RuleExecuted":  "_:datetime*",
+                                                           "Denied":  "_:datetime*",
+                                                           "Updated":  "_:datetime*",
+                                                           "OutsideRepairCompleted":  "_:datetime*",
+                                                           "TicketResolved":  "_:datetime*",
+                                                           "SubticketStatusChange":  "_:datetime*",
+                                                           "AssetVerified":  "_:datetime*"
+                                                       },
+                                     "Portals":  {
+                                                     "Agent":  "_:datetime*",
+                                                     "Requestor":  "_:datetime*",
+                                                     "iiQAdmin":  "_:datetime*"
+                                                 },
+                                     "WorkflowActionTypes":  {
+                                                                 "ManagerApprovalRequired":  "_:string*",
+                                                                 "SendEmail":  "_:string*",
+                                                                 "TeamApprovalRequired":  "_:string*",
+                                                                 "StatusChange":  "_:string*"
+                                                             },
+                                     "MetricTypes":  {
+                                                         "SlaResponseTime":  "_:string*",
+                                                         "SlaResolutionTime":  "_:string*",
+                                                         "SlaCustomTime":  "_:string*"
+                                                     },
+                                     "ProductId":  "_:string*",
+                                     "WorkflowApprovalTypes":  {
+                                                                   "Deny":  "_:string*",
+                                                                   "Defer":  "_:string*",
+                                                                   "Approve":  "_:string*"
+                                                               }
+                                 },
+                    "TimeZone":  "string*",
+                    "IanaTimeZone":  "string*",
+                    "AnonymousUserId":  "string*",
+                    "Environment":  "string*",
+                    "CreatedDate":  "string*",
+                    "WorkHoursEndUtc":  "string*",
+                    "DomainWithProtocol":  "string*",
+                    "OnboardingStartDate":  "string*",
+                    "WorkMinutesPerDay":  "datetime*",
+                    "OnboardingDaysSinceOnboardingStart":  "datetime*",
+                    "Status":  {
+                                   "DisplayOrder":  "_:datetime*",
+                                   "IsOnboarding":  "_:boolean*",
+                                   "Name":  "_:string*",
+                                   "SiteStatusTypeId":  "_:string*",
+                                   "IsActive":  "_:boolean*"
+                               },
+                    "DbClusterIndex":  "datetime*",
+                    "IsSandbox":  "boolean*",
+                    "SiteId":  "string*",
+                    "OffsetInMinutesFromUtc":  "datetime*",
+                    "VanityDomain":  "string*",
+                    "Apps":  {
+                                 "AppEngineDependencies":  {
+                
+                                                           },
+                                 "AppVersions":  {
+                                                     "guestTicketing":  "_:string*",
+                                                     "sparePoolManagement":  "_:string*",
+                                                     "advancedDeployment":  "_:string*",
+                                                     "microsoftSccm":  "_:string*",
+                                                     "marketing":  "_:string*",
+                                                     "dreamboxLearning":  "_:string*",
+                                                     "approvalWorkflows":  "_:string*",
+                                                     "skyward":  "_:string*",
+                                                     "statusBoard":  "_:string*",
+                                                     "paymentsFeeTracker":  "_:string*",
+                                                     "formsForIT":  "_:string*",
+                                                     "screenRecording":  "_:string*",
+                                                     "googleDeviceData":  "_:string*",
+                                                     "nwea":  "_:string*",
+                                                     "nearpod":  "_:string*",
+                                                     "simpleAnnouncements":  "_:string*",
+                                                     "subticketsForIT":  "_:string*",
+                                                     "classLinkSso":  "_:string*"
+                                                 },
+                                 "AppTokens":  {
+                                                   "guestTicketing":  "_:string*",
+                                                   "sparePoolManagement":  "_:string*",
+                                                   "paymentsFeeTracker-88df910c-91aa-e711-80c2-0004ffa00010":  "_:string*",
+                                                   "advancedDeployment":  "_:string*",
+                                                   "microsoftSccm":  "_:string*",
+                                                   "marketing":  "_:string*",
+                                                   "dreamboxLearning":  "_:string*",
+                                                   "approvalWorkflows":  "_:string*",
+                                                   "skyward":  "_:string*",
+                                                   "statusBoard":  "_:string*",
+                                                   "formsForIT":  "_:string*",
+                                                   "screenRecording":  "_:string*",
+                                                   "googleDeviceData":  "_:string*",
+                                                   "nwea":  "_:string*",
+                                                   "nearpod":  "_:string*",
+                                                   "simpleAnnouncements":  "_:string*",
+                                                   "subticketsForIT":  "_:string*",
+                                                   "classLinkSso":  "_:string*"
+                                               }
+                             },
+                    "Name":  "string*",
+                    "Domain":  "string*",
+                    "WorkHoursStartUtc":  "string*",
+                    "ProductId":  "string*"
+                }
+                
+            },
+            "Users": {
+                "operations": {
+                    "UsersList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/services/users"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "UserId",
+                "resources": {
+                    "UserId": "string*",
+                    "IsDeleted": "boolean*",
+                    "SiteId": "string*",
+                    "ProductId": "string*",
+                    "CreatedDate": "string*",
+                    "ModifiedDate": "string*",
+                    "LocationId": "string*",
+                    "LocationName": "string*",
+                    "IsActive": "boolean*",
+                    "IsOnline": "boolean*",
+                    "IsOnlineLastUpdated": "string*",
+                    "Name": "string*",
+                    "FirstName": "string*",
+                    "LastName": "string*",
+                    "Email": "string*",
+                    "Username": "string*",
+                    "SchoolIdNumber": "string*",
+                    "Grade": "string*",
+                    "ExternalId": "string*",
+                    "RoleId": "string*",
+                    "Role": {
+                        "RoleId": "_:string*",
+                        "Name": "_:string*",
+                        "Portal": "_:string*",
+                        "Visibility": "_:string*",
+                        "CategoryId": "_:string*",
+                        "Users": "_:string*",
+                        "Scope": "_:string*"
+                    },
+                    "AuthenticatedBy": "string*",
+                    "PhotoId": "string*",
+                    "AccountSetupProgress": "string*",
+                    "IsEmailVerified": "boolean*",
+                    "IsWelcomeEmailSent": "boolean*",
+                    "PreventProviderUpdates": "boolean*",
+                    "IsOutOfOffice": "boolean*",
+                    "Portal": "string*",
+                    "Options": {
+                        "Notifications": {
+                            "TicketCreated": "_:boolean*",
+                            "TicketUpdated": "_:boolean*",
+                            "TicketAssignedToYou": "_:boolean*",
+                            "TicketAssignedToTeam": "_:boolean*",
+                            "TicketDisableFollowerNotifications": "_:boolean*",
+                            "AssetChanged": "_:boolean*"
+                        }
+                    },
+                    "CustomFieldValues": [
+                        {
+                            "CustomFieldTypeId": "string*",
+                            "EditorTypeId": "string*",
+                            "Value": "string*",
+                            "IsHidden": "boolean*"
+                        }
+                    ],
+                    "IsExternalUser": "boolean*",
+                    "ShouldOnlySeeExternallyAvailableRooms": "boolean*"
+                }
+                
+            }
+            
+        }
+    },
+    "rest": {
+        "config": {
+            "baseUrl": "https://{tenant_id}",
+            "get": {
+                "query_parameters": {},
+                "pagination":{
+                    "mode":"generic",
+                    "zero_based": true,
+                    "totalAttribute": "Paging.TotalRows",
+                    "path":[],
+                    "params":{
+                        "$p":"{page_number}",
+                        "$s":"{page_size}"
+                    }
+                }
+            },
+            "authentication": "aeries",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "/api/v5/systeminfo"
+            },
+            "socket_timeout": 3600000,
+            "accept": "application/json",
+            "headers": {
+                "Authorization": "Bearer {client_secret}",
+                "SiteId": "{site_id}",
+                "Client": "NIM"
+            },
+            "retry": [
+                {
+                    "type": "statusCode",
+                    "statusCode": 429,
+                    "retry": {
+                        "type": "simple",
+                        "maxCount": 12,
+                        "waitTime": 60
+                    }
+                },
+                {
+                    "type": "statusCode",
+                    "statusCode": 500,
+                    "retry": {
+                        "type": "simple",
+                        "maxCount": 12,
+                        "waitTime": 60
+                    }
+                },
+                {
+                    "type": "connectionError"
+                }
+            ]
+        }
+    },
+    "connection": {
+        "items": [
+            {
+                "name": "site_id",
+                "type": "textbox",
+                "label": "Site Id",
+                "value": ""
+            },
+            {
+                "name": "user_Id",
+                "type": "textbox",
+                "label": "User Id",
+                "value": ""
+            },
+            {
+                "name": "page_size",
+                "type": "textbox",
+                "label": "Page Size",
+                "value": "500"
+            }
+        ]
+    }
+}
