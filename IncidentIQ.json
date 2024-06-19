@@ -679,7 +679,7 @@
             "authentication": "aeries",
             "call_handling": "generic",
             "test_connection": {
-                "url": "/api/v5/systeminfo"
+                "url": "/services/users?$p=0&$s=10"
             },
             "socket_timeout": 3600000,
             "accept": "application/json",
