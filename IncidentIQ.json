@@ -21,85 +21,104 @@
                 "resources": {
                     "AssetId": "string*",
                     "SiteId": "string*",
-                    "Site": {
-                        "SiteId": "_:string*",
-                        "ProductId": "_:string",
-                        "CreatedDate": "_:string",
-                        "Name": "_:string",
-                        "OffsetInMinutesFromUtc": "_:string",
-                        "WorkMinutesPerDay": "_:string",
-                        "DbClusterIndex": "_:string",
-                        "StatusTypeId": "_:string",
-                        "WorkHoursStartUtc": "_:string",
-                        "WorkHoursEndUtc": "_:string",
-                        "SystemUserId": "_:string",
-                        "AnonymousUserId": "_:string",
-                        "IsSandbox": "_:boolean"
-                    },
                     "ProductId": "string*",
                     "CreatedDate": "string*",
                     "ModifiedDate": "string*",
                     "AssetTypeId": "string*",
                     "AssetTypeName": "string*",
-                    "AssetInventoryTypeId": "string*",
                     "IsDeleted": "boolean*",
+                    "IsTraining": "boolean*",
+                    "SourceId": "number",
                     "StatusTypeId": "string*",
-                    "Status": {
-                        "AssetStatusTypeId": "_:string*",
-                        "Scope": "_:string*",
-                        "Name": "_:string*",
-                        "IsRetired": "_:boolean*"
-                    },
                     "AssetTag": "string*",
+                    "SerialNumber": "string",
+                    "ExternalId": "string",
                     "Name": "string*",
-                    "CanOwnerManage": "boolean*",
-                    "CanSubmitTicket": "boolean*",
-                    "IsFavorite": "boolean*",
+                    "CanOwnerManage": "boolean",
+                    "CanSubmitTicket": "boolean",
+                    "IsFavorite": "boolean",
                     "ModelId": "string*",
-                    "Model": {
-                        "ModelId": "_:string*",
-                        "Scope": "_:string*",
-                        "Name": "_:string*",
-                        "ModelName": "_:string*",
-                        "AssetTypeId": "_:string*",
-                        "ManufacturerId": "_:string*",
-                        "Manufacturer": {
-                            "ManufacturerId": "_:string*",
-                            "Scope": "_:string*",
-                            "Name": "_:string*",
-                            "EsoIsVisible": "_:boolean*"
-                        },
-                        "CategoryId": "_:string*",
-                        "Category": {
-                            "Scope": "_:string*",
-                            "CategoryId": "_:string*",
-                            "Level": "_:string",
-                            "SortOrder": "_:string",
-                            "CategoryTypeId": "_:string*",
-                            "Name": "_:string*",
-                            "Icon": "_:string"
-                        },
-                        "CreatedDate": "_:string*",
-                        "ModifiedDate": "_:string*",
-                        "EsoIsVisible": "_:boolean*",
-                        "IsGenericModel": "_:boolean*"
-                    },
+                    "OwnerId": "string*",
                     "LocationId": "string*",
-                    "Location": {
-                        "Name": "_:string*",
-                        "LocationTypeId": "_:string*",
-                        "LocationType": {
-                            "Name": "_:string*"
+                    "LocationDetails": "string",
+                    "LocationRoomId": "string*",
+                    "Notes": "string*",
+                    "HasOpenTickets": "boolean",
+                    "OpenTickets": "string",
+                    "CustomFieldValues": [
+                        {
+                        "CustomFieldTypeId": "string*",
+                        "Value": "string*",
+                        "AssetId": "string*"
                         }
+                    ],
+                    "PurchasedDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year": "_:string"
                     },
-                    "LocationDetails": "string*",
-                    "HasOpenTickets": "boolean*",
-                    "OpenTickets": "string*",
-                    "CustomFieldValues": "string*",
-                    "AssetAuditPolicyStatusSortOrder": "string*",
-                    "LastVerificationSuccessful": "boolean*",
-                    "TotalQuantity": "string*",
-                    "AvailableQuantity": "string*"
+                    "DeployedDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year": "_:string"
+                    },
+                    "RetiredDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year":"_:string"
+                    },
+                    "PurchasePrice": "string",
+                    "PurchasePoNumber": "string",
+                    "WarrantyExpirationDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year": "_:string"
+                    },
+                    "WarrantyInfo": "string",
+                    "LastInventoryDate": "string",
+                    "InvoiceNumber": "string",
+                    "Vendor": "string",
+                    "InsuranceExpirationDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year": "_:string"
+                    },
+                    "InsuranceInfo": "string",
+                    "FundingSourceId": "string",
+                    "IsReadOnly": "boolean",
+                    "IsExternallyManaged": "boolean",
+                    "SpareGroupId": "string",
+                    "SparePoolId": "string",
+                    "StorageUnitNumber": "string",
+                    "StorageSlotNumber": "string",
+                    "StorageLocationId": "string",
+                    "StorageLocationName": "string",
+                    "AssetAuditPolicyStatusTypeId": "string",
+                    "AssetAuditPolicyStatusName": "string",
+                    "AssetAuditPolicyScheduleId": "string",
+                    "AssetAuditPolicyScheduleName": "string",
+                    "AssetAuditPolicyId": "string",
+                    "AssetAuditPolicyName": "string",
+                    "AssetAuditPolicyStatusSortOrder": "string",
+                    "LastVerificationDateTime": "string",
+                    "LastVerificationUserId": "string",
+                    "LastVerificationTypeId": "string",
+                    "LastVerificationTypeName": "string",
+                    "LastVerificationSuccessful": "boolean",
+                    "LastVerificationComments": "string",
+                    "LastVerificationLocationId": "string",
+                    "LastVerificationLocationRoomId": "string",
+                    "LastVerificationLocationName": "string"
                 }
                 
             },
@@ -142,6 +161,53 @@
                     "Assets": "number*",
                     "EsoIsVisible": "boolean*",
                     "AssetInventoryTypeId": "string*"
+                }
+                
+            },
+            "Asset_Funding_Types": {
+                "operations": {
+                    "Asset_Funding_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/assets/funding/types"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "AssetFundingTypeId",
+                "resources": {
+                    "AssetFundingTypeId": "string*",
+                    "SiteId": "string*",
+                    "Scope": "string*",
+                    "Name": "string*"
+                }
+                
+            },
+            "Asset_Status_Types": {
+                "operations": {
+                    "Asset_Status_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/assets/status/types"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "AssetStatusTypeId",
+                "resources": {
+                    "AssetStatusTypeId": "string*",
+                    "SiteId": "string*",
+                    "Scope": "string*",
+                    "Name": "string*",
+                    "IsRetired": "boolean*"
                 }
                 
             },
@@ -585,8 +651,9 @@
                 "operations": {
                     "UsersList": {
                         "method": "get",
+                        "verb": "post",
                         "call": {
-                            "path": "/services/users"
+                            "path": "/api/v1.0/users"
                         },
                         "processing_options": {
                             "output_field": "Items"
@@ -602,58 +669,161 @@
                     "SiteId": "string*",
                     "ProductId": "string*",
                     "CreatedDate": "string*",
-                    "ModifiedDate": "string*",
+                    "ModifiedDate": "*",
                     "LocationId": "string*",
                     "LocationName": "string*",
                     "IsActive": "boolean*",
                     "IsOnline": "boolean*",
-                    "IsOnlineLastUpdated": "string*",
+                    "IsOnlineLastUpdated": "string",
                     "Name": "string*",
                     "FirstName": "string*",
                     "LastName": "string*",
                     "Email": "string*",
                     "Username": "string*",
+                    "Password": "string",
+                    "Phone": "string*",
                     "SchoolIdNumber": "string*",
                     "Grade": "string*",
+                    "Homeroom": "string*",
                     "ExternalId": "string*",
-                    "RoleId": "string*",
-                    "Role": {
-                        "RoleId": "_:string*",
-                        "Name": "_:string*",
-                        "Portal": "_:string*",
-                        "Visibility": "_:string*",
-                        "CategoryId": "_:string*",
-                        "Users": "_:string*",
-                        "Scope": "_:string*"
-                    },
-                    "AuthenticatedBy": "string*",
-                    "PhotoId": "string*",
-                    "AccountSetupProgress": "string*",
+                    "InternalComments": "string",
+                    "RoleId": "strin*",
+                    "SourceId": "string*",
+                    "AuthenticatedBy": "string",
+                    "PhotoId": "string",
+                    "AccountSetupProgress": "string",
+                    "TrainingPercentComplete": "string",
                     "IsEmailVerified": "boolean*",
                     "IsWelcomeEmailSent": "boolean*",
                     "PreventProviderUpdates": "boolean*",
                     "IsOutOfOffice": "boolean*",
-                    "Portal": "string*",
-                    "Options": {
-                        "Notifications": {
-                            "TicketCreated": "_:boolean*",
-                            "TicketUpdated": "_:boolean*",
-                            "TicketAssignedToYou": "_:boolean*",
-                            "TicketAssignedToTeam": "_:boolean*",
-                            "TicketDisableFollowerNotifications": "_:boolean*",
-                            "AssetChanged": "_:boolean*"
-                        }
+                    "Portal": "string",
+                    "HourlyRate": "string",
+                    "PasswordExpirationDate": {
+                        "Day": "_:string",
+                        "DayOfWeek": "_:string",
+                        "DayOfYear": "_:string",
+                        "Month": "_:string",
+                        "Year": "_:string"
                     },
-                    "CustomFieldValues": [
+                    "PermissionPolicyOverrides": [
                         {
-                            "CustomFieldTypeId": "string*",
-                            "EditorTypeId": "string*",
-                            "Value": "string*",
-                            "IsHidden": "boolean*"
+                        "UserId": "string*",
+                        "ProductId": "string*",
+                        "PermissionPolicyId": "string*"
                         }
                     ],
-                    "IsExternalUser": "boolean*",
-                    "ShouldOnlySeeExternallyAvailableRooms": "boolean*"
+                    "CustomFieldValues": [
+                        {
+                        "CustomFieldTypeId": "string*",
+                        "Value": "string*",
+                        "UserId": "string*"
+                        }
+                    ],
+                    "Assets": [
+                        {
+                        "AssetId": "string*",
+                        "SiteId": "string*",
+                        "ProductId": "string*",
+                        "CreatedDate": "string*",
+                        "ModifiedDate": "string*",
+                        "AssetTypeId": "string*",
+                        "AssetTypeName": "string*",
+                        "IsDeleted": "boolean*",
+                        "IsTraining": "boolean*",
+                        "SourceId": "number",
+                        "StatusTypeId": "string*",
+                        "AssetTag": "string*",
+                        "SerialNumber": "string",
+                        "ExternalId": "string",
+                        "Name": "string*",
+                        "CanOwnerManage": "boolean",
+                        "CanSubmitTicket": "boolean",
+                        "IsFavorite": "boolean",
+                        "ModelId": "string*",
+                        "OwnerId": "string*",
+                        "LocationId": "string*",
+                        "LocationDetails": "string",
+                        "LocationRoomId": "string*",
+                        "Notes": "string*",
+                        "HasOpenTickets": "boolean",
+                        "OpenTickets": "string",
+                        "CustomFieldValues": [
+                            {
+                            "CustomFieldTypeId": "string*",
+                            "Value": "string*",
+                            "AssetId": "string*"
+                            }
+                        ],
+                        "PurchasedDate": {
+                            "Day": "_:string",
+                            "DayOfWeek": "_:string",
+                            "DayOfYear": "_:string",
+                            "Month": "_:string",
+                            "Year": "_:string"
+                        },
+                        "DeployedDate": {
+                            "Day": "_:string",
+                            "DayOfWeek": "_:string",
+                            "DayOfYear": "_:string",
+                            "Month": "_:string",
+                            "Year": "_:string"
+                        },
+                        "RetiredDate": {
+                            "Day": "_:string",
+                            "DayOfWeek": "_:string",
+                            "DayOfYear": "_:string",
+                            "Month": "_:string",
+                            "Year": "_:string"
+                        },
+                        "PurchasePrice": "string",
+                        "PurchasePoNumber": "string",
+                        "WarrantyExpirationDate": {
+                            "Day": "_:string",
+                            "DayOfWeek": "_:string",
+                            "DayOfYear": "_:string",
+                            "Month": "_:string",
+                            "Year": "_:string"
+                        },
+                        "WarrantyInfo": "string",
+                        "LastInventoryDate": "string",
+                        "InvoiceNumber": "string",
+                        "Vendor": "string",
+                        "InsuranceExpirationDate": {
+                            "Day": "_:string",
+                            "DayOfWeek": "_:string",
+                            "DayOfYear": "_:string",
+                            "Month": "_:string",
+                            "Year": "_:string"
+                        },
+                        "InsuranceInfo": "string",
+                        "FundingSourceId": "string",
+                        "IsReadOnly": "boolean",
+                        "IsExternallyManaged": "boolean",
+                        "SpareGroupId": "string",
+                        "SparePoolId": "string",
+                        "StorageUnitNumber": "string",
+                        "StorageSlotNumber": "string",
+                        "StorageLocationId": "string",
+                        "StorageLocationName": "string",
+                        "AssetAuditPolicyStatusTypeId": "string",
+                        "AssetAuditPolicyStatusName": "string",
+                        "AssetAuditPolicyScheduleId": "string",
+                        "AssetAuditPolicyScheduleName": "string",
+                        "AssetAuditPolicyId": "string",
+                        "AssetAuditPolicyName": "string",
+                        "AssetAuditPolicyStatusSortOrder": "string",
+                        "LastVerificationDateTime": "string",
+                        "LastVerificationUserId": "string",
+                        "LastVerificationTypeId": "string",
+                        "LastVerificationTypeName": "string",
+                        "LastVerificationSuccessful": "boolean",
+                        "LastVerificationComments": "string",
+                        "LastVerificationLocationId": "string",
+                        "LastVerificationLocationRoomId": "string",
+                        "LastVerificationLocationName": "string"
+                        }
+                    ]
                 }
                 
             }
