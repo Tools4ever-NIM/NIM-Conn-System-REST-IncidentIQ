@@ -321,7 +321,120 @@
                     "CreatedDate": "string*",
                     "ModifiedDate": "string*",
                     "OriginSourceId": "string*"
-                }
+                }                
+            },
+            "Locations": {
+                "operations": {
+                    "LocationsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/locations/all"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "LocationId",
+                "resources": {
+                    "Meta": {
+                        "property1": "_:string*",
+                        "property2": "_:string*"
+                    },
+                    "LocationId": "string*",
+                    "SiteId": "string*",
+                    "Name": "string*",
+                    "Abbreviation": "string*",
+                    "CreatedDate": "string*",
+                    "ModifiedDate": "string*",
+                    "AddressId": "string*",
+                    "Address": {
+                        "Meta": {
+                        "property1": "_:string*",
+                        "property2": "_:string*"
+                        },
+                        "AddressId": "_:string*",
+                        "SiteId": "_:string*",
+                        "CreatedDate": "_:string*",
+                        "ModifiedDate": "_:string*",
+                        "Attn": "_:string*",
+                        "Street1": "_:string*",
+                        "Street2": "_:string*",
+                        "City": "_:string*",
+                        "State": "_:string*",
+                        "Zip": "_:string*",
+                        "Country": "_:string*",
+                        "Latitude": "_:string*",
+                        "Longitude": "_:string*"
+                    },
+                    "LocationTypeId": "string*",
+                    "LocationType": {
+                        "Meta": {
+                        "property1": "_:string*",
+                        "property2": "_:string*"
+                        },
+                        "LocationTypeId": "_:string*",
+                        "Name": "_:string*"
+                    },
+                    "LogoId": "string*",
+                    "FloorplanId": "string*"
+                    }
+                
+            },
+            "Location_Rooms": {
+                "operations": {
+                    "Location_RoomsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/locations/rooms"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "LocationRoomId",
+                "resources": {
+                    "Meta": {
+                        "property1": "_:string*",
+                        "property2": "_:string*"
+                    },
+                    "LocationRoomId": "string*",
+                    "SiteId": "string*",
+                    "LocationId": "string*",
+                    "Name": "string*",
+                    "Description": "string*",
+                    "LocationName": "string*"
+                    }
+                
+            },
+            "Location_Types": {
+                "operations": {
+                    "Location_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/v1.0/locations/types"
+                        },
+                        "processing_options": {
+                            "output_field": "Items"
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "LocationTypeId",
+                "resources": {
+                    "Meta": {
+                        "property1": "_:string*",
+                        "property2": "_:string*"
+                    },
+                    "LocationTypeId": "string*",
+                    "Name": "string*"
+                    }
                 
             },
             "Sites": {
