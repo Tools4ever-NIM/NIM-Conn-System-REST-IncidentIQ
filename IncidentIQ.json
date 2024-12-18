@@ -284,7 +284,18 @@
                     "EnabledByDefault": "boolean*",
                     "DisplayOrder": "number*",
                     "ComplexEditorNamespace": "boolean*",
-                    "ComplexEditorColumns": "string*",
+                    "ComplexEditorColumns": [{
+                        "ComplexEditorColumnId": "string*",
+                        "EditorNamespace": "string*",
+                        "Caption": "string*",
+                        "Name": "string*",
+                        "IsRequired": "boolean*",
+                        "IsSearchable": "boolean*",
+                        "IsHidden": "boolean*",
+                        "EditorTypeId": "string*",
+                        "SortOrder": "string*",
+                        "EditorType": "string*"
+                      }],
                     "IsDeleted": "boolean*"
                 }
                 
@@ -328,7 +339,11 @@
                     "LocationsList": {
                         "method": "get",
                         "call": {
-                            "path": "/api/v1.0/locations/all"
+                            "path": "/api/v1.0/locations/all",
+                            "extraHeaders": {
+                                "productId": "88df910c-91aa-e711-80c2-0004ffa00010",
+                                "siteId": "{site_id}"
+                            }
                         },
                         "processing_options": {
                             "output_field": "Items"
